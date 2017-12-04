@@ -4,6 +4,7 @@
 //
 //  Created by denglong on 02/12/2017.
 //  Copyright © 2017 ubtrobot. All rights reserved.
+//  访问控制
 //  访问控制限制其他源文件和模块对你的代码的访问。这个特性允许你隐藏代码的实现细节，并指定一个偏好的接口让其他代码可以访问和使用。
 
 import UIKit
