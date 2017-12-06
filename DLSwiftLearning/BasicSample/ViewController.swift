@@ -270,7 +270,7 @@ class ViewController: UIViewController {
         
         //11.单侧区间
         //闭区间有另外一种形式来让区间朝一个方向尽可能的远
-        for name in names[2...] {
+        for name in names {
             print(name)
         }
         

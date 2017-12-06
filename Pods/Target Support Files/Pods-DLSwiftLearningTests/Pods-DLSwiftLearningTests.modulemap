@@ -1,0 +1,6 @@
+framework module Pods_DLSwiftLearningTests {
+  umbrella header "Pods-DLSwiftLearningTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

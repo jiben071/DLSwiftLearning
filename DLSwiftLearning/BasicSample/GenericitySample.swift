@@ -58,11 +58,11 @@ class GenericitySample: NSObject {
         
         var arrayOfStrings = ["uno", "dos", "tres"]
         
-        if allItemsMatch(stackOfStrings2, arrayOfStrings) {
-            print("All items match.")
-        }else{
-            print("Not all items match.")
-        }
+//        if allItemsMatch(stackOfStrings2, arrayOfStrings) {
+//            print("All items match.")
+//        }else{
+//            print("Not all items match.")
+//        }
         
         if stackOfStrings2.isTop("tres") {
             print("Top element is tres.")
@@ -190,7 +190,7 @@ protocol Container {
     func makeIterator() -> Iterator
 }
 
-struct IntStack2: Container {
+struct IntStack2 {
     var items = [Int]()
     mutating func push(_ item: Int) {
         items.append(item)
@@ -213,13 +213,13 @@ struct IntStack2: Container {
         return items[i]
     }
     
-    func makeIterator() -> IntStack2.Iterator {
-        
-    }
+//    func makeIterator() -> IntStack2.Iterator {
+//
+//    }
 }
 
 
-struct Stack2<Element>: Container {
+struct Stack2<Element> {
     // original Stack<Element> implementation
     var items = [Element]()
     mutating func push(_ item: Element) {
@@ -229,7 +229,7 @@ struct Stack2<Element>: Container {
         return items.removeLast()
     }
     
-    mutating func append(_ item: Stack2<Element>.ItemType) {
+    mutating func append(_ item: Element) {
         return items.append(item)
     }
     var count: Int{
@@ -240,9 +240,9 @@ struct Stack2<Element>: Container {
         return items[i]
     }
     
-    func makeIterator() -> Stack2<Element>.Iterator {
-        
-    }
+//    func makeIterator() -> Stack2<Element>.Iterator {
+//
+//    }
 }
 
 //7.扩展现有类型来指定关联类型
@@ -282,9 +282,9 @@ extension Container where ItemType == Double {
 
 
 //对于一个继承自其他协议的协议来说，你可以通过在协议的声明中包含泛型 where 分句来给继承的协议中关联类型添加限定
-protocol ComparableContainer: Container where ItemType: Conparable {
-    
-}
+//protocol ComparableContainer: Container where ItemType: Conparable {
+//
+//}
 
 
 //10.泛型下标  还有疑问
