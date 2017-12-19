@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1003567F1FE8EA520049DB5E /* HLThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1003567E1FE8EA520049DB5E /* HLThread.swift */; };
+		100356811FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100356801FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift */; };
 		1031D5401FA1C3AB00846E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031D53F1FA1C3AB00846E86 /* AppDelegate.swift */; };
 		1031D5451FA1C3AB00846E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1031D5431FA1C3AB00846E86 /* Main.storyboard */; };
 		1031D5471FA1C3AB00846E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1031D5461FA1C3AB00846E86 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		026D25FDDB381FD7F9A40D5F /* Pods_DLSwiftLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLSwiftLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1003567E1FE8EA520049DB5E /* HLThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLThread.swift; sourceTree = "<group>"; };
+		100356801FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLSurviceThreadOnRunLoopVC.swift; sourceTree = "<group>"; };
 		1031D53C1FA1C3AB00846E86 /* DLSwiftLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLSwiftLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1031D53F1FA1C3AB00846E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1031D5441FA1C3AB00846E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1003567D1FE8E7F90049DB5E /* RunLoopTest */ = {
+			isa = PBXGroup;
+			children = (
+				1003567E1FE8EA520049DB5E /* HLThread.swift */,
+				100356801FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift */,
+			);
+			path = RunLoopTest;
+			sourceTree = "<group>";
+		};
 		1031D5331FA1C3AB00846E86 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 		1031D53E1FA1C3AB00846E86 /* DLSwiftLearning */ = {
 			isa = PBXGroup;
 			children = (
+				1003567D1FE8E7F90049DB5E /* RunLoopTest */,
 				1065C62A1FD521D600DD40B1 /* CocoaPodSample */,
 				1065C6051FD4F7BB00DD40B1 /* BasicSample */,
 				1031D53F1FA1C3AB00846E86 /* AppDelegate.swift */,
@@ -539,7 +553,9 @@
 				1065C6301FD5281000DD40B1 /* UIViewController+HUD.m in Sources */,
 				1065C6281FD4F7BB00DD40B1 /* ErrorSample.swift in Sources */,
 				1065C6191FD4F7BB00DD40B1 /* ARCSample.swift in Sources */,
+				1003567F1FE8EA520049DB5E /* HLThread.swift in Sources */,
 				1065C6221FD4F7BB00DD40B1 /* LearningSampleTwo.swift in Sources */,
+				100356811FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift in Sources */,
 				1031D5401FA1C3AB00846E86 /* AppDelegate.swift in Sources */,
 				1065C6241FD4F7BB00DD40B1 /* PropertySample.swift in Sources */,
 				1065C6231FD4F7BB00DD40B1 /* SubscriptSample.swift in Sources */,
