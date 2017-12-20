@@ -22,10 +22,6 @@ extension NSObject{
     ///   - repeatCount: 重复次数
     ///   - handler: 循环事件，闭包参数： 1.timer 2.剩余执行次数
     public func DispatchTimer(timerInterval: Double, repeatCount:Int, handler:@escaping (DispatchSourceTimer?,Int)->()) {
-//        if repeatCount <= 0 {
-//            return
-//        }
-        
         guard repeatCount > 0 else {
             return
         }
@@ -70,8 +66,4 @@ extension NSObject{
             handler()
         }
     }
-    
-    
-    
-    
 }

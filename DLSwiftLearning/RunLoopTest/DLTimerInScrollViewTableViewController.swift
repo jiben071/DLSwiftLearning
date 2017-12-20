@@ -19,7 +19,6 @@ class DLTimerInScrollViewTableViewController: UITableViewController{
     var count: Int = 0
     var countTwo: Int = 0
     
-    
     /*
      然后，我们在滑动tableView的时候timerUpdate方法，并不会调用。
      * 原因是啥呢？*
@@ -41,7 +40,7 @@ class DLTimerInScrollViewTableViewController: UITableViewController{
         return timer
     }()
     
-    lazy var subThread:Thread = {
+    lazy var subThread:Thread = {//将定时器放在子线程中
         let thread = Thread(target: self, selector: #selector(timerTestOfSubThread), object: nil)
         return thread
     }()
@@ -74,7 +73,7 @@ class DLTimerInScrollViewTableViewController: UITableViewController{
         //此代码作用：让tableview的HeaderView高度自适应
         //利用systemLayoutSizeFittingSize:计算出真实高度
         
-        /*
+        /*  //这里屏蔽的原因是：计算出来的高度为0，需要再调试
         let height = self.tableView.tableHeaderView?.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
         
         var headerFrame = self.tableView.tableHeaderView?.frame;
@@ -95,7 +94,7 @@ class DLTimerInScrollViewTableViewController: UITableViewController{
             print("启动runLoop前——\(String(describing: runLoop.currentMode))")
             print("currentRunLoop:\(RunLoop.current)")
             self.timerTwo.fire()
-            RunLoop.current.run()
+            RunLoop.current.run()  //如果不启动runloop，就无法长时间keep子线程，定时器只走一次就结束了
         }
     }
 
