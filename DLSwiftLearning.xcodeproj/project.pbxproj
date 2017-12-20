@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1003567F1FE8EA520049DB5E /* HLThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1003567E1FE8EA520049DB5E /* HLThread.swift */; };
 		100356811FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100356801FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift */; };
+		1003568B1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1003568A1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift */; };
+		1003568E1FEA31730049DB5E /* GCDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1003568D1FEA31730049DB5E /* GCDHelper.swift */; };
 		1031D5401FA1C3AB00846E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031D53F1FA1C3AB00846E86 /* AppDelegate.swift */; };
 		1031D5451FA1C3AB00846E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1031D5431FA1C3AB00846E86 /* Main.storyboard */; };
 		1031D5471FA1C3AB00846E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1031D5461FA1C3AB00846E86 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		026D25FDDB381FD7F9A40D5F /* Pods_DLSwiftLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLSwiftLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1003567E1FE8EA520049DB5E /* HLThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLThread.swift; sourceTree = "<group>"; };
 		100356801FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLSurviceThreadOnRunLoopVC.swift; sourceTree = "<group>"; };
+		1003568A1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLTimerInScrollViewTableViewController.swift; sourceTree = "<group>"; };
+		1003568D1FEA31730049DB5E /* GCDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDHelper.swift; sourceTree = "<group>"; };
 		1031D53C1FA1C3AB00846E86 /* DLSwiftLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLSwiftLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1031D53F1FA1C3AB00846E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1031D5441FA1C3AB00846E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,8 +142,17 @@
 			children = (
 				1003567E1FE8EA520049DB5E /* HLThread.swift */,
 				100356801FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift */,
+				1003568A1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift */,
 			);
 			path = RunLoopTest;
+			sourceTree = "<group>";
+		};
+		1003568C1FEA314C0049DB5E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				1003568D1FEA31730049DB5E /* GCDHelper.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		1031D5331FA1C3AB00846E86 = {
@@ -167,6 +180,7 @@
 		1031D53E1FA1C3AB00846E86 /* DLSwiftLearning */ = {
 			isa = PBXGroup;
 			children = (
+				1003568C1FEA314C0049DB5E /* Tool */,
 				1003567D1FE8E7F90049DB5E /* RunLoopTest */,
 				1065C62A1FD521D600DD40B1 /* CocoaPodSample */,
 				1065C6051FD4F7BB00DD40B1 /* BasicSample */,
@@ -554,9 +568,11 @@
 				1065C6281FD4F7BB00DD40B1 /* ErrorSample.swift in Sources */,
 				1065C6191FD4F7BB00DD40B1 /* ARCSample.swift in Sources */,
 				1003567F1FE8EA520049DB5E /* HLThread.swift in Sources */,
+				1003568B1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift in Sources */,
 				1065C6221FD4F7BB00DD40B1 /* LearningSampleTwo.swift in Sources */,
 				100356811FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift in Sources */,
 				1031D5401FA1C3AB00846E86 /* AppDelegate.swift in Sources */,
+				1003568E1FEA31730049DB5E /* GCDHelper.swift in Sources */,
 				1065C6241FD4F7BB00DD40B1 /* PropertySample.swift in Sources */,
 				1065C6231FD4F7BB00DD40B1 /* SubscriptSample.swift in Sources */,
 				1065C6251FD4F7BB00DD40B1 /* GenericitySample.swift in Sources */,
@@ -729,11 +745,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 982JFBV2HY;
+				DEVELOPMENT_TEAM = GLWCRSS83U;
 				INFOPLIST_FILE = DLSwiftLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ubtrobot.technology.DLSwiftLearning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ubtrobot.technology.DLSwiftLearning2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DLSwiftLearning/CocoaPodSample/DLSwiftLearning-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -749,11 +765,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 982JFBV2HY;
+				DEVELOPMENT_TEAM = GLWCRSS83U;
 				INFOPLIST_FILE = DLSwiftLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ubtrobot.technology.DLSwiftLearning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ubtrobot.technology.DLSwiftLearning2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DLSwiftLearning/CocoaPodSample/DLSwiftLearning-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
