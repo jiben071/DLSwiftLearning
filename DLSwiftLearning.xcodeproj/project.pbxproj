@@ -37,6 +37,7 @@
 		1065C6291FD4F7BB00DD40B1 /* InternalStorageSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065C6171FD4F7BB00DD40B1 /* InternalStorageSample.swift */; };
 		1065C62C1FD521F200DD40B1 /* PickFlavorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065C62B1FD521F200DD40B1 /* PickFlavorViewController.swift */; };
 		1065C6301FD5281000DD40B1 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065C62F1FD5281000DD40B1 /* UIViewController+HUD.m */; };
+		10B0C81C1FEE28FE00C37675 /* DLFluencyMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C81B1FEE28FE00C37675 /* DLFluencyMonitor.swift */; };
 		24FDA8E778A58DB1710C0BF4 /* Pods_DLSwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026D25FDDB381FD7F9A40D5F /* Pods_DLSwiftLearning.framework */; };
 		78A950B81E128C70A16D03B1 /* Pods_DLSwiftLearningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49745109D3FFFCABFE7D27 /* Pods_DLSwiftLearningTests.framework */; };
 		EF22149FFBBBD9CFD131B8D6 /* Pods_DLSwiftLearningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA88B30145D31505A70BE3F6 /* Pods_DLSwiftLearningUITests.framework */; };
@@ -99,6 +100,7 @@
 		1065C62D1FD5280F00DD40B1 /* DLSwiftLearning-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLSwiftLearning-Bridging-Header.h"; sourceTree = "<group>"; };
 		1065C62E1FD5281000DD40B1 /* UIViewController+HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
 		1065C62F1FD5281000DD40B1 /* UIViewController+HUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		10B0C81B1FEE28FE00C37675 /* DLFluencyMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLFluencyMonitor.swift; sourceTree = "<group>"; };
 		4A82B1C69235470C10A3FDA6 /* Pods-DLSwiftLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLSwiftLearningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLSwiftLearningTests/Pods-DLSwiftLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E49745109D3FFFCABFE7D27 /* Pods_DLSwiftLearningTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLSwiftLearningTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8902DA724E965847E125EE51 /* Pods-DLSwiftLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLSwiftLearningTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLSwiftLearningTests/Pods-DLSwiftLearningTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				1003568D1FEA31730049DB5E /* GCDHelper.swift */,
+				10B0C81B1FEE28FE00C37675 /* DLFluencyMonitor.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				1065C6181FD4F7BB00DD40B1 /* ViewController.swift in Sources */,
 				1065C62C1FD521F200DD40B1 /* PickFlavorViewController.swift in Sources */,
 				1065C61D1FD4F7BB00DD40B1 /* MethodSample.swift in Sources */,
+				10B0C81C1FEE28FE00C37675 /* DLFluencyMonitor.swift in Sources */,
 				1065C61A1FD4F7BB00DD40B1 /* AccessControlSample.swift in Sources */,
 				1065C6301FD5281000DD40B1 /* UIViewController+HUD.m in Sources */,
 				1065C6281FD4F7BB00DD40B1 /* ErrorSample.swift in Sources */,
