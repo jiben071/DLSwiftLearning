@@ -118,10 +118,16 @@ class DLFluencyMonitor: NSObject {
     }
     
     static func runLoopObserverCallBack(observer:CFRunLoopObserver,activity:CFRunLoopActivity,info:UnsafeMutableRawPointer) {
-//        let monitor = UnsafeMutablePointer<DLFluencyMonitor>(info)
-//        print(monitor)
         //http://blog.csdn.net/zenny_chen/article/details/53455940
-        let monitor = info.assumingMemoryBound(to: type(of: DLFluencyMonitor.self));
+        //https://developer.apple.com/documentation/swift/unsafemutablepointer#//apple_ref/doc/uid/TP40015980
+        /*
+         Swift 3.0给void*和const void*分别引入了UnsafeRawPointer类型和UnsafeMutableRawPointer类型。
+         
+         此外，UnsafeRawPointer类型与UnsafeMutableRawPointer类型不能直接通过UnsafePointer与UnsafeMutablePointer的构造器转换为相应类型，而只能通过它们的assumingMemoryBound(to:)方法去转。
+         */
+        let monitorPointer:UnsafeMutablePointer<DLFluencyMonitor> = info.assumingMemoryBound(to: type(of: DLFluencyMonitor.sharedInstance));
+        
+        let monitor:DLFluencyMonitor = monitorPointer.pointee
         
         switch activity {
         case CFRunLoopActivity.entry:
@@ -130,8 +136,11 @@ class DLFluencyMonitor: NSObject {
             print("CFRunLoopActivity.beforeTimers")
         case CFRunLoopActivity.beforeSources:
             print("CFRunLoopActivity.beforeSources")
+            monitor.startDate = NSDate()
+            monitor.excuting = true
         case CFRunLoopActivity.beforeWaiting:
             print("CFRunLoopActivity.beforeWaiting")
+            monitor.excuting = false
         case CFRunLoopActivity.afterWaiting:
             print("CFRunLoopActivity.afterWaiting")
         case CFRunLoopActivity.exit:
@@ -142,26 +151,22 @@ class DLFluencyMonitor: NSObject {
     }
     
     static func runLoopTimerCallBack(timer:CFRunLoopTimer,info:UnsafeMutableRawPointer) {
-        /*
-         FluencyMonitor *monitor = (__bridge FluencyMonitor*)info;
-         if (!monitor.excuting) {
-         return;
-         }
-         
-         // 如果主线程正在执行任务，并且这一次loop 执行到 现在还没执行完，那就需要计算时间差
-         NSTimeInterval excuteTime = [[NSDate date] timeIntervalSinceDate:monitor.startDate];
-         NSLog(@"定时器---%@",[NSThread currentThread]);
-         NSLog(@"主线程执行了---%f秒",excuteTime);
-         
-         if (excuteTime >= monitor.fault) {
-         NSLog(@"线程卡顿了%f秒",excuteTime);
-         [monitor handleStackInfo];
-         }
-         */
+        
+        let monitorPointer:UnsafeMutablePointer<DLFluencyMonitor> = info.assumingMemoryBound(to: type(of: DLFluencyMonitor.sharedInstance));
+        
+        let monitor:DLFluencyMonitor = monitorPointer.pointee
+        
+        if !monitor.excuting! {
+            return
+        }
+        
+        // 如果主线程正在执行任务，并且这一次loop 执行到 现在还没执行完，那就需要计算时间差
+        let excuteTime = NSDate().timeIntervalSince(monitor.startDate! as Date)
+        print("定时器：\(Thread.current)")
+        print("主线程执行了——\(excuteTime)秒")
+        if excuteTime >= monitor.fault! {
+            print("线程卡顿了\(excuteTime)秒")
+            monitor.handleStackInfo()
+        }
     }
-    
-    
-
-    
-    
 }
