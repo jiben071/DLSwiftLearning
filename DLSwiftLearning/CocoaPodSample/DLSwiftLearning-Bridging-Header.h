@@ -4,3 +4,6 @@
 
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "UIViewController+HUD.h"
+
+#include <libkern/OSAtomic.h>
+#include <execinfo.h>
