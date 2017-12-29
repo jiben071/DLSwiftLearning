@@ -40,6 +40,12 @@
 		10B0C81C1FEE28FE00C37675 /* DLFluencyMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C81B1FEE28FE00C37675 /* DLFluencyMonitor.swift */; };
 		10B0C8231FF1EF0400C37675 /* DLCrashHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C8221FF1EF0400C37675 /* DLCrashHandler.swift */; };
 		10B0C8281FF21D8200C37675 /* DLCrashTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C8271FF21D8200C37675 /* DLCrashTestViewController.swift */; };
+		10B0C8391FF512CB00C37675 /* DLPhoroThunbnailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C8381FF512CB00C37675 /* DLPhoroThunbnailCollectionViewController.swift */; };
+		10B0C83B1FF5141100C37675 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C83A1FF5141100C37675 /* UIImageExtension.swift */; };
+		10B0C83D1FF5144B00C37675 /* DLPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C83C1FF5144B00C37675 /* DLPhotoCell.swift */; };
+		10B0C83F1FF5156E00C37675 /* DLPhotoCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C83E1FF5156E00C37675 /* DLPhotoCommentViewController.swift */; };
+		10B0C8411FF5158200C37675 /* DLZoomedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C8401FF5158200C37675 /* DLZoomedPhotoViewController.swift */; };
+		10B0C8431FF515A300C37675 /* DLManagePhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C8421FF515A300C37675 /* DLManagePhotoPageViewController.swift */; };
 		24FDA8E778A58DB1710C0BF4 /* Pods_DLSwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026D25FDDB381FD7F9A40D5F /* Pods_DLSwiftLearning.framework */; };
 		78A950B81E128C70A16D03B1 /* Pods_DLSwiftLearningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49745109D3FFFCABFE7D27 /* Pods_DLSwiftLearningTests.framework */; };
 		EF22149FFBBBD9CFD131B8D6 /* Pods_DLSwiftLearningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA88B30145D31505A70BE3F6 /* Pods_DLSwiftLearningUITests.framework */; };
@@ -105,6 +111,12 @@
 		10B0C81B1FEE28FE00C37675 /* DLFluencyMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLFluencyMonitor.swift; sourceTree = "<group>"; };
 		10B0C8221FF1EF0400C37675 /* DLCrashHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLCrashHandler.swift; sourceTree = "<group>"; };
 		10B0C8271FF21D8200C37675 /* DLCrashTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLCrashTestViewController.swift; sourceTree = "<group>"; };
+		10B0C8381FF512CB00C37675 /* DLPhoroThunbnailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPhoroThunbnailCollectionViewController.swift; sourceTree = "<group>"; };
+		10B0C83A1FF5141100C37675 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		10B0C83C1FF5144B00C37675 /* DLPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPhotoCell.swift; sourceTree = "<group>"; };
+		10B0C83E1FF5156E00C37675 /* DLPhotoCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPhotoCommentViewController.swift; sourceTree = "<group>"; };
+		10B0C8401FF5158200C37675 /* DLZoomedPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLZoomedPhotoViewController.swift; sourceTree = "<group>"; };
+		10B0C8421FF515A300C37675 /* DLManagePhotoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLManagePhotoPageViewController.swift; sourceTree = "<group>"; };
 		4A82B1C69235470C10A3FDA6 /* Pods-DLSwiftLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLSwiftLearningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLSwiftLearningTests/Pods-DLSwiftLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E49745109D3FFFCABFE7D27 /* Pods_DLSwiftLearningTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLSwiftLearningTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8902DA724E965847E125EE51 /* Pods-DLSwiftLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLSwiftLearningTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLSwiftLearningTests/Pods-DLSwiftLearningTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +201,7 @@
 		1031D53E1FA1C3AB00846E86 /* DLSwiftLearning */ = {
 			isa = PBXGroup;
 			children = (
+				10B0C8321FF4EEB900C37675 /* SwiftProject */,
 				1003568C1FEA314C0049DB5E /* Tool */,
 				1003567D1FE8E7F90049DB5E /* RunLoopTest */,
 				1065C62A1FD521D600DD40B1 /* CocoaPodSample */,
@@ -254,6 +267,27 @@
 				1065C62D1FD5280F00DD40B1 /* DLSwiftLearning-Bridging-Header.h */,
 			);
 			path = CocoaPodSample;
+			sourceTree = "<group>";
+		};
+		10B0C8321FF4EEB900C37675 /* SwiftProject */ = {
+			isa = PBXGroup;
+			children = (
+				10B0C8371FF4F50E00C37675 /* project11 */,
+			);
+			path = SwiftProject;
+			sourceTree = "<group>";
+		};
+		10B0C8371FF4F50E00C37675 /* project11 */ = {
+			isa = PBXGroup;
+			children = (
+				10B0C8381FF512CB00C37675 /* DLPhoroThunbnailCollectionViewController.swift */,
+				10B0C83A1FF5141100C37675 /* UIImageExtension.swift */,
+				10B0C83C1FF5144B00C37675 /* DLPhotoCell.swift */,
+				10B0C83E1FF5156E00C37675 /* DLPhotoCommentViewController.swift */,
+				10B0C8401FF5158200C37675 /* DLZoomedPhotoViewController.swift */,
+				10B0C8421FF515A300C37675 /* DLManagePhotoPageViewController.swift */,
+			);
+			path = project11;
 			sourceTree = "<group>";
 		};
 		3955424C01CE57B45659C512 /* Frameworks */ = {
@@ -572,21 +606,27 @@
 				10B0C8231FF1EF0400C37675 /* DLCrashHandler.swift in Sources */,
 				1065C6181FD4F7BB00DD40B1 /* ViewController.swift in Sources */,
 				1065C62C1FD521F200DD40B1 /* PickFlavorViewController.swift in Sources */,
+				10B0C8391FF512CB00C37675 /* DLPhoroThunbnailCollectionViewController.swift in Sources */,
 				1065C61D1FD4F7BB00DD40B1 /* MethodSample.swift in Sources */,
+				10B0C83F1FF5156E00C37675 /* DLPhotoCommentViewController.swift in Sources */,
 				10B0C81C1FEE28FE00C37675 /* DLFluencyMonitor.swift in Sources */,
 				1065C61A1FD4F7BB00DD40B1 /* AccessControlSample.swift in Sources */,
 				1065C6301FD5281000DD40B1 /* UIViewController+HUD.m in Sources */,
+				10B0C8431FF515A300C37675 /* DLManagePhotoPageViewController.swift in Sources */,
 				1065C6281FD4F7BB00DD40B1 /* ErrorSample.swift in Sources */,
 				1065C6191FD4F7BB00DD40B1 /* ARCSample.swift in Sources */,
 				1003567F1FE8EA520049DB5E /* HLThread.swift in Sources */,
+				10B0C83D1FF5144B00C37675 /* DLPhotoCell.swift in Sources */,
 				1003568B1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift in Sources */,
 				1065C6221FD4F7BB00DD40B1 /* LearningSampleTwo.swift in Sources */,
 				100356811FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift in Sources */,
 				1031D5401FA1C3AB00846E86 /* AppDelegate.swift in Sources */,
+				10B0C83B1FF5141100C37675 /* UIImageExtension.swift in Sources */,
 				1003568E1FEA31730049DB5E /* GCDHelper.swift in Sources */,
 				1065C6241FD4F7BB00DD40B1 /* PropertySample.swift in Sources */,
 				1065C6231FD4F7BB00DD40B1 /* SubscriptSample.swift in Sources */,
 				1065C6251FD4F7BB00DD40B1 /* GenericitySample.swift in Sources */,
+				10B0C8411FF5158200C37675 /* DLZoomedPhotoViewController.swift in Sources */,
 				10B0C8281FF21D8200C37675 /* DLCrashTestViewController.swift in Sources */,
 				1065C6201FD4F7BB00DD40B1 /* InheritSample.swift in Sources */,
 			);
