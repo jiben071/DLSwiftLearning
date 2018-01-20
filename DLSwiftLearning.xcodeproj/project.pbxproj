@@ -11,6 +11,8 @@
 		100356811FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100356801FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift */; };
 		1003568B1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1003568A1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift */; };
 		1003568E1FEA31730049DB5E /* GCDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1003568D1FEA31730049DB5E /* GCDHelper.swift */; };
+		102BC0BF2011C42500A17110 /* DLMoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102BC0BE2011C42500A17110 /* DLMoviesTableViewController.swift */; };
+		102BC0C12011C4CB00A17110 /* DLMoviesDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102BC0C02011C4CB00A17110 /* DLMoviesDataHelper.swift */; };
 		1031D5401FA1C3AB00846E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031D53F1FA1C3AB00846E86 /* AppDelegate.swift */; };
 		1031D5451FA1C3AB00846E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1031D5431FA1C3AB00846E86 /* Main.storyboard */; };
 		1031D5471FA1C3AB00846E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1031D5461FA1C3AB00846E86 /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		100356801FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLSurviceThreadOnRunLoopVC.swift; sourceTree = "<group>"; };
 		1003568A1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLTimerInScrollViewTableViewController.swift; sourceTree = "<group>"; };
 		1003568D1FEA31730049DB5E /* GCDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDHelper.swift; sourceTree = "<group>"; };
+		102BC0BE2011C42500A17110 /* DLMoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLMoviesTableViewController.swift; sourceTree = "<group>"; };
+		102BC0C02011C4CB00A17110 /* DLMoviesDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLMoviesDataHelper.swift; sourceTree = "<group>"; };
 		1031D53C1FA1C3AB00846E86 /* DLSwiftLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLSwiftLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1031D53F1FA1C3AB00846E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1031D5441FA1C3AB00846E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +182,15 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		102BC0BB2011C3D000A17110 /* UnitTestSample */ = {
+			isa = PBXGroup;
+			children = (
+				102BC0BE2011C42500A17110 /* DLMoviesTableViewController.swift */,
+				102BC0C02011C4CB00A17110 /* DLMoviesDataHelper.swift */,
+			);
+			path = UnitTestSample;
+			sourceTree = "<group>";
+		};
 		1031D5331FA1C3AB00846E86 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +216,7 @@
 		1031D53E1FA1C3AB00846E86 /* DLSwiftLearning */ = {
 			isa = PBXGroup;
 			children = (
+				102BC0BB2011C3D000A17110 /* UnitTestSample */,
 				10B7CFEB2004C44D008F1A5B /* Architecture */,
 				10B0C8321FF4EEB900C37675 /* SwiftProject */,
 				1003568C1FEA314C0049DB5E /* Tool */,
@@ -470,13 +484,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DLSwiftLearningTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		49625A9AB6D6B62FC2E48E26 /* [CP] Copy Pods Resources */ = {
@@ -500,13 +517,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DLSwiftLearning-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6826625E8697536E8374B034 /* [CP] Check Pods Manifest.lock */ = {
@@ -515,13 +535,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DLSwiftLearningUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7862F362A4E4355419635B27 /* [CP] Embed Pods Frameworks */ = {
@@ -530,9 +553,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DLSwiftLearning/Pods-DLSwiftLearning-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -560,9 +588,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DLSwiftLearningTests/Pods-DLSwiftLearningTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -613,6 +646,7 @@
 				1065C6261FD4F7BB00DD40B1 /* EmbeddedTypeSample.swift in Sources */,
 				1065C61C1FD4F7BB00DD40B1 /* ExtensionSample.swift in Sources */,
 				1065C61B1FD4F7BB00DD40B1 /* ClassAndStruct.swift in Sources */,
+				102BC0C12011C4CB00A17110 /* DLMoviesDataHelper.swift in Sources */,
 				1065C6271FD4F7BB00DD40B1 /* ProtocolSample.swift in Sources */,
 				10B0C8231FF1EF0400C37675 /* DLCrashHandler.swift in Sources */,
 				1065C6181FD4F7BB00DD40B1 /* ViewController.swift in Sources */,
@@ -628,6 +662,7 @@
 				1065C6191FD4F7BB00DD40B1 /* ARCSample.swift in Sources */,
 				1003567F1FE8EA520049DB5E /* HLThread.swift in Sources */,
 				10B0C83D1FF5144B00C37675 /* DLPhotoCell.swift in Sources */,
+				102BC0BF2011C42500A17110 /* DLMoviesTableViewController.swift in Sources */,
 				1003568B1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift in Sources */,
 				1065C6221FD4F7BB00DD40B1 /* LearningSampleTwo.swift in Sources */,
 				100356811FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift in Sources */,
@@ -806,6 +841,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DAC08582F10F816C2E071D91 /* Pods-DLSwiftLearning.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -819,6 +855,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -826,6 +863,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4D1123A494A3E13FB7593C2 /* Pods-DLSwiftLearning.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -838,6 +876,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "DLSwiftLearning/CocoaPodSample/DLSwiftLearning-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
@@ -845,7 +884,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A82B1C69235470C10A3FDA6 /* Pods-DLSwiftLearningTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 982JFBV2HY;
@@ -856,6 +895,7 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DLSwiftLearning.app/DLSwiftLearning";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -863,7 +903,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8902DA724E965847E125EE51 /* Pods-DLSwiftLearningTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 982JFBV2HY;
@@ -874,6 +914,7 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DLSwiftLearning.app/DLSwiftLearning";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};

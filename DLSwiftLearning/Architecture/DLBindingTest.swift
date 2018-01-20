@@ -9,10 +9,19 @@
 
 //Mac OS直接就支持Binding，但是iOS并不支持。当然iOS支持KVO和notification，但是没有binding方便。
 
+
+//MVVM模式简单尝试  如果使用Binding技术可以大大的减少代码量  Functional Reactive Programming框架，例如ReactiveCocoa，RxSwift。
+
 import UIKit
 
 class DLBindingTest: NSObject {
-    
+    func test() {
+        //Assembling of MVVM
+        let model = BTPerson(firstName: "John", lastName: "Smith")
+        let viewModel = GreetingViewModel(person: model)
+        let view = GreetingViewController()
+        view.viewModel = viewModel
+    }
 }
 
 struct BTPerson {
@@ -31,7 +40,7 @@ class GreetingViewModel: GreetingViewModelProtocol {
     let person: BTPerson
     var greeting: String? {
         didSet{
-            self.greetingDidChange(self)//逻辑通过闭包呈现给controller改变界面
+            self.greetingDidChange!(self)//逻辑通过闭包呈现给controller改变界面
         }
     }
     var greetingDidChange: ((GreetingViewModelProtocol) -> ())?
@@ -64,9 +73,3 @@ class GreetingViewController: UIViewController {
     }
     
 }
-
-//Assembling of MVVM
-let model = BTPerson(firstName: "John", lastName: "Smith")
-let viewModel = GreetingViewModel(person: model)
-let view = GreetingViewController()
-view.viewModel = viewModel

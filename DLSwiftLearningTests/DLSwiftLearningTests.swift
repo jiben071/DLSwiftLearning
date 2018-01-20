@@ -4,32 +4,34 @@
 //
 //  Created by denglong on 2017/10/26.
 //  Copyright © 2017年 ubtrobot. All rights reserved.
-//
+//  Quick的概念解释：每个it代表一小段测试，describe和context则是it示例的逻辑群集（logical groupings），用来描述你要测试的是什么
+//  http://www.cocoachina.com/ios/20171114/21160.html
 
-import XCTest
-@testable import DLSwiftLearning
+//import XCTest
+import Nimble
+import Quick
 
-class DLSwiftLearningTests: XCTestCase {
+@testable import DLSwiftLearning  //这一行基本上就是标示出我们正在测试的项目目标
+
+class DLSwiftLearningTests: QuickSpec {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    //完全走不通啊，妈了个蛋蛋
+    override func spec() {
+        
+        var subject: DLMoviesTableViewController!
+        //第一个测试案例
+        describe("DLMoviesTableViewController") {
+            beforeEach {//表明它将在每个范例开始之前运行，所以你可以把它看作为在MoviesTableViewController内的每一个测试被执行前，会先运行这段代码
+                subject = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DLMoviesTableViewController") as! DLMoviesTableViewController
+                _ = subject.view  //将视图控制器放入内存中，它就像是调用viewDidLoad
+            }
+            
+            context("when view is loaded") {
+                it("Should have 8 movies loaded") {
+                    expect(subject.tableView.numberOfRows(inSection: 0)).to(equal(8))
+                }
+            }
         }
     }
     

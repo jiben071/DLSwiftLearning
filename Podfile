@@ -11,15 +11,18 @@ target 'DLSwiftLearning' do
   pod 'MBProgressHUD', '~> 1.0.0'
 
   # Pods for DLSwiftLearning
-
+  
   target 'DLSwiftLearningTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick', '~> 1.2.0'
+    pod 'Nimble', '~> 7.0.3'
   end
 
   target 'DLSwiftLearningUITests' do
     inherit! :search_paths
     # Pods for testing
+
   end
 
 end
