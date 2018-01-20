@@ -16,7 +16,7 @@ import Quick
 class DLSwiftLearningTests: QuickSpec {
     
     
-    //完全走不通啊，妈了个蛋蛋
+    //完全走不通啊，妈了个蛋蛋，妈蛋：走的通了，不能用真机跑！！！
     override func spec() {
         
         var subject: DLMoviesTableViewController!
@@ -30,6 +30,7 @@ class DLSwiftLearningTests: QuickSpec {
             context("when view is loaded") {
                 it("Should have 8 movies loaded") {
                     expect(subject.tableView.numberOfRows(inSection: 0)).to(equal(8))
+//                    fail()
                 }
             }
         }
