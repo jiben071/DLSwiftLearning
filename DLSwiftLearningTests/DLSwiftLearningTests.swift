@@ -33,6 +33,17 @@ class DLSwiftLearningTests: QuickSpec {
 //                    fail()
                 }
             }
+            
+            context("Table View", {
+                var cell: UITableViewCell!
+                beforeEach {
+                    cell = subject.tableView(subject.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+                }
+                it("should show movie title and genre", closure: {
+                    expect(cell.textLabel?.text).to(equal("The Emoji Movie"))
+                    expect(cell.detailTextLabel?.text).to(equal("Animation"))
+                })
+            })
         }
     }
     

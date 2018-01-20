@@ -17,11 +17,23 @@ enum UnitGenre: Int {//电影类型
 struct UnitMovie {
     var title: String
     var genre: UnitGenre
+    func genreString() -> String {
+        switch genre {
+        case .Action:
+            return "Action"
+        case .Animation:
+            return "Animation"
+        default:
+            return "None"
+        }
+    }
 }
 
 
 class DLMoviesTableViewController: UITableViewController {
-
+    var movies: [UnitMovie] { //计算属性
+        return DLMoviesDataHelper.getMovies()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,14 +58,16 @@ class DLMoviesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return DLMoviesDataHelper.getMovies().count
+        return movies.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
-
+        let movie = movies[indexPath.row]
         // Configure the cell...
+        cell.textLabel?.text = movie.title
+        cell.detailTextLabel?.text = movie.genreString()
 
         return cell
     }
