@@ -5,7 +5,7 @@
 //  Created by denglong on 2017/10/26.
 //  Copyright © 2017年 ubtrobot. All rights reserved.
 //  Quick的概念解释：每个it代表一小段测试，describe和context则是it示例的逻辑群集（logical groupings），用来描述你要测试的是什么
-//  http://www.cocoachina.com/ios/20171114/21160.html
+//  http://www.cocoachina.com/ios/20171114/21160.html  范例，教程
 
 //import XCTest
 import Nimble
@@ -30,7 +30,6 @@ class DLSwiftLearningTests: QuickSpec {
             context("when view is loaded") {
                 it("Should have 8 movies loaded") {
                     expect(subject.tableView.numberOfRows(inSection: 0)).to(equal(8))
-//                    fail()
                 }
             }
             

@@ -19,6 +19,10 @@
 		1031D54A1FA1C3AB00846E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1031D5481FA1C3AB00846E86 /* LaunchScreen.storyboard */; };
 		1031D5551FA1C3AB00846E86 /* DLSwiftLearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031D5541FA1C3AB00846E86 /* DLSwiftLearningTests.swift */; };
 		1031D5601FA1C3AC00846E86 /* DLSwiftLearningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031D55F1FA1C3AC00846E86 /* DLSwiftLearningUITests.swift */; };
+		1063472C201976B400C62B54 /* DLUnitiTestSampleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063472B201976B400C62B54 /* DLUnitiTestSampleTable.swift */; };
+		1063472F2019788300C62B54 /* MinionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063472D2019788300C62B54 /* MinionService.swift */; };
+		106347302019788300C62B54 /* Minion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063472E2019788300C62B54 /* Minion.swift */; };
+		1063473220197CFC00C62B54 /* DLMinionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1063473120197CFC00C62B54 /* DLMinionServiceTests.swift */; };
 		1065C6181FD4F7BB00DD40B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065C6061FD4F7BB00DD40B1 /* ViewController.swift */; };
 		1065C6191FD4F7BB00DD40B1 /* ARCSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065C6071FD4F7BB00DD40B1 /* ARCSample.swift */; };
 		1065C61A1FD4F7BB00DD40B1 /* AccessControlSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065C6081FD4F7BB00DD40B1 /* AccessControlSample.swift */; };
@@ -91,6 +95,10 @@
 		1031D55B1FA1C3AC00846E86 /* DLSwiftLearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLSwiftLearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1031D55F1FA1C3AC00846E86 /* DLSwiftLearningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLSwiftLearningUITests.swift; sourceTree = "<group>"; };
 		1031D5611FA1C3AC00846E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1063472B201976B400C62B54 /* DLUnitiTestSampleTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUnitiTestSampleTable.swift; sourceTree = "<group>"; };
+		1063472D2019788300C62B54 /* MinionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinionService.swift; sourceTree = "<group>"; };
+		1063472E2019788300C62B54 /* Minion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minion.swift; sourceTree = "<group>"; };
+		1063473120197CFC00C62B54 /* DLMinionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLMinionServiceTests.swift; sourceTree = "<group>"; };
 		1065C6061FD4F7BB00DD40B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1065C6071FD4F7BB00DD40B1 /* ARCSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARCSample.swift; sourceTree = "<group>"; };
 		1065C6081FD4F7BB00DD40B1 /* AccessControlSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessControlSample.swift; sourceTree = "<group>"; };
@@ -185,8 +193,11 @@
 		102BC0BB2011C3D000A17110 /* UnitTestSample */ = {
 			isa = PBXGroup;
 			children = (
+				1063472E2019788300C62B54 /* Minion.swift */,
+				1063472D2019788300C62B54 /* MinionService.swift */,
 				102BC0BE2011C42500A17110 /* DLMoviesTableViewController.swift */,
 				102BC0C02011C4CB00A17110 /* DLMoviesDataHelper.swift */,
+				1063472B201976B400C62B54 /* DLUnitiTestSampleTable.swift */,
 			);
 			path = UnitTestSample;
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 			children = (
 				1031D5541FA1C3AB00846E86 /* DLSwiftLearningTests.swift */,
 				1031D5561FA1C3AC00846E86 /* Info.plist */,
+				1063473120197CFC00C62B54 /* DLMinionServiceTests.swift */,
 			);
 			path = DLSwiftLearningTests;
 			sourceTree = "<group>";
@@ -661,8 +673,10 @@
 				1065C6281FD4F7BB00DD40B1 /* ErrorSample.swift in Sources */,
 				1065C6191FD4F7BB00DD40B1 /* ARCSample.swift in Sources */,
 				1003567F1FE8EA520049DB5E /* HLThread.swift in Sources */,
+				1063472C201976B400C62B54 /* DLUnitiTestSampleTable.swift in Sources */,
 				10B0C83D1FF5144B00C37675 /* DLPhotoCell.swift in Sources */,
 				102BC0BF2011C42500A17110 /* DLMoviesTableViewController.swift in Sources */,
+				106347302019788300C62B54 /* Minion.swift in Sources */,
 				1003568B1FEA07320049DB5E /* DLTimerInScrollViewTableViewController.swift in Sources */,
 				1065C6221FD4F7BB00DD40B1 /* LearningSampleTwo.swift in Sources */,
 				100356811FE8EAA50049DB5E /* DLSurviceThreadOnRunLoopVC.swift in Sources */,
@@ -676,6 +690,7 @@
 				10B0C8411FF5158200C37675 /* DLZoomedPhotoViewController.swift in Sources */,
 				10B0C8281FF21D8200C37675 /* DLCrashTestViewController.swift in Sources */,
 				1065C6201FD4F7BB00DD40B1 /* InheritSample.swift in Sources */,
+				1063472F2019788300C62B54 /* MinionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +699,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1031D5551FA1C3AB00846E86 /* DLSwiftLearningTests.swift in Sources */,
+				1063473220197CFC00C62B54 /* DLMinionServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
